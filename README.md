@@ -2,6 +2,26 @@
 ## Overview
 This project is designed to scrape emergency room wait times from a specified URL ([https://www.lhsc.on.ca/adult-ed/emergency-department-wait-times](https://www.lhsc.on.ca/adult-ed/emergency-department-wait-times)), process the data, and log it into CSV files. The project includes functions for web scraping using different libraries, string manipulation, and logging.
 
+## Usage
+
+To run the scraping and logging process, execute the `app.py` script. This will start an infinite loop that scrapes the data at specified intervals (default is every 15 minutes).
+
+```bash
+python app.py
+```
+
+Ensure you have the necessary libraries installed, which you can do using the following command:
+
+```bash
+pip install requests beautifulsoup4 cloudscraper requests_html pandas
+```
+
+## Configuration
+
+- Modify the default file names for data and log storage in the `main` function of `app.py`.
+- Adjust the `scrape_interval` variable in `app.py` to change the frequency of scraping.
+
+
 ## File Structure
 
 ```
@@ -34,29 +54,7 @@ project/
 ### app.py
 - **main**: Scrapes emergency room wait times from a specified URL and logs the data. Handles scenarios including successful data retrieval, warnings for unexpected data formats, and errors during the scraping process.
 
-## Usage
-
-To run the scraping and logging process, execute the `app.py` script. This will start an infinite loop that scrapes the data at specified intervals (default is every 15 minutes).
-
-```bash
-python app.py
-```
-
-Ensure you have the necessary libraries installed, which you can do using the following command:
-
-```bash
-pip install requests beautifulsoup4 cloudscraper requests_html pandas
-```
-
-## Configuration
-
-- Modify the default file names for data and log storage in the `main` function of `app.py`.
-- Adjust the `scrape_interval` variable in `app.py` to change the frequency of scraping.
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
----
-
-This readme provides a comprehensive overview of the project structure, functionalities, and usage instructions.
