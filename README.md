@@ -1,7 +1,4 @@
-# london-ON-ER-wait-times-scraper
- A python scraper for collecting the ER wait times in London, Ontario from https://www.lhsc.on.ca/adult-ed/emergency-department-wait-times
-
-
+# Scrape ER Wait Times in London, Ontario
 ## Overview
 This project is designed to scrape emergency room wait times from a specified URL ([https://www.lhsc.on.ca/adult-ed/emergency-department-wait-times](https://www.lhsc.on.ca/adult-ed/emergency-department-wait-times)), process the data, and log it into CSV files. The project includes functions for web scraping using different libraries, string manipulation, and logging.
 
@@ -11,13 +8,9 @@ This project is designed to scrape emergency room wait times from a specified UR
 project/
 │
 ├── request_soup.py      # Contains various functions for web scraping using requests, cloudscraper, and requests_html.
-│
 ├── helper_fns.py        # Contains utility functions for string manipulation and HTTP request status formatting.
-│
 ├── file_builders.py     # Contains a function to log data to a CSV file, either creating a new file or appending to an existing one.
-│
 ├── app.py               # The main script that orchestrates the scraping, processing, and logging of emergency room wait times.
-│
 └── README.md            # Project readme file.
 ```
 
