@@ -1,0 +1,7 @@
+Time,Status,Message,Details
+2024-05-31 00:07:59,Success,All as expected,UHWaitTimeValue: 9.25 hours; VHWaitTimeValue: 6.25 hours
+2024-05-31 00:23:00,Success,All as expected,UHWaitTimeValue: 9.5 hours; VHWaitTimeValue: 6.5 hours
+2024-05-31 00:38:02,Success,All as expected,UHWaitTimeValue: 9.75 hours; VHWaitTimeValue: 4.25 hours
+2024-05-31 00:53:04,Success,All as expected,UHWaitTimeValue: 10.0 hours; VHWaitTimeValue: 4.5 hours
+2024-05-31 01:08:05,Success,All as expected,UHWaitTimeValue: 8.75 hours; VHWaitTimeValue: 2.75 hours
+2024-05-31 01:23:07,Success,All as expected,UHWaitTimeValue: 8.75 hours; VHWaitTimeValue: 3.0 hours

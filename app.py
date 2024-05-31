@@ -8,10 +8,20 @@ import time
 
 def main(data_filename='ER-wait-times.csv',
          dump_filename='scrape-log-ER-wait.csv'):
+    '''
+    This function scrapes emergency room wait times
+    from a specified URL and logs the data.
+    It handles different scenarios including
+    - successful data retrieval,
+    - warnings for unexpected data formats, and
+    - errors during the scraping process.
+    '''
+
     time_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     wait_time_fields = []
     try:
-        scrape_url = ''
+        root_url = 'https://www.lhsc.on.ca/'
+        scrape_url = f'{root_url}adult-ed/emergency-department-wait-times'
         reqRet = requests.get(scrape_url)
         rStatus = reqStatus(reqRet)
         soup = BeautifulSoup(reqRet.content, 'html.parser')
@@ -23,7 +33,7 @@ def main(data_filename='ER-wait-times.csv',
             ], filename=dump_filename)
             return
 
-        if len(wait_time_fields != 2):
+        if len(wait_time_fields) != 2:
             log_data([
                 time_now,
                 'Warning',

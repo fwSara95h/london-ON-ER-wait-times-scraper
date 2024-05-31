@@ -8,6 +8,13 @@ from requests_html import HTMLSession  # type: ignore
 def linkToSoup_scrapingAnt(
       url_to_Scrape, pCountry=None, apiKey=None, loadCss=None,
       parser='html.parser', isv=True, returnErr=False):
+    '''
+    This function uses the ScrapingAnt API to fetch and parse a webpage,
+    optionally using a proxy country and CSS selector.
+    It handles API key management, URL construction, and error reporting,
+    returning a BeautifulSoup object or an error message.
+    '''
+
     defaultKey = 'YOUR_API_TOKEN'  # paste here
     sa_api = 'https://api.scrapingant.com/v2/general'
     sa_key = str(apiKey) if apiKey else defaultKey
@@ -35,6 +42,13 @@ def linkToSoup_scrapingAnt(
 # def rqSoup(targetUrl, conf={}, isv=True, returnErr=False):
 def linkToSoup(targetUrl, conf={}, isv=True,
                returnErr=False, returnResp=False):
+    '''
+    This function fetches and parses a webpage using the requests library,
+    with optional configuration for headers, cookies, etc.
+    It supports detailed logging and error handling, and
+    can return the response object along with the parsed BeautifulSoup object.
+    '''
+
     bsParser = conf.get('parser', 'html.parser')
     reqArgs = {k: v for k, v in conf.items() if k != 'parser'}
     try:
@@ -62,6 +76,13 @@ def linkToSoup(targetUrl, conf={}, isv=True,
 
 
 def linkToSoup_h(targetUrl, conf={}, isv=True, returnErr=False):
+    '''
+    This function fetches and parses a webpage
+    using the requests_html library, with optional configuration.
+    It handles errors and logging,
+    returning a BeautifulSoup object or an error message.
+    '''
+
     parser = conf["parser"] if "parser" in conf else None
     try:
         # r = requests.get(targetUrl)
@@ -81,6 +102,13 @@ def linkToSoup_h(targetUrl, conf={}, isv=True, returnErr=False):
 
 
 def linkToSoup_c(targetUrl, conf={}, isv=True, returnErr=False):
+    '''
+    This function fetches and parses a webpage
+    using the cloudscraper library to bypass anti-bot measures.
+    It includes error handling and logging,
+    returning a BeautifulSoup object or an error message.
+    '''
+
     parser = conf["parser"] if "parser" in conf else None
     try:
         # r = requests.get(targetUrl)

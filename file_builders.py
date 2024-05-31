@@ -3,6 +3,12 @@ import os
 
 
 def log_data(row_data=None, headers=None, filename='logs_dump.csv'):
+    '''
+    This function logs data to a CSV file.
+    A new file is created if necessary.
+    Existing files are appended to.
+    '''
+
     if row_data is None:
         row_data = []
     if headers is None:
