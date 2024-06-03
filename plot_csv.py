@@ -10,11 +10,11 @@ df['Time'] = pd.to_datetime(df['Time'])
 
 # Plotting the data
 plt.figure(figsize=(14, 7))
-plt.plot(df['Time'], df['UH'], label='UH', marker='o')
-plt.plot(df['Time'], df['VH'], label='VH', marker='o')
+plt.plot(df['Time'], df['UH'], label='University Hospital', marker='o')
+plt.plot(df['Time'], df['VH'], label='Victoria Hospital', marker='o')
 
-plt.title('ER Wait Times Over Time')
-plt.xlabel('Time')
+plt.title('Emergency Room Wait Time in London Ontario')
+plt.xlabel('Date and Time')
 plt.ylabel('Wait Time (hours)')
 plt.legend()
 plt.grid(True)
